@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "hPLUm8aVwFhOjQ7dtDV8rmSgNqhQx5MCsmVdC1KSysA=",
+  "Source": "currency-api",
+  "BasePath": "_content/currency-api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
