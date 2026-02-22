@@ -1,4 +1,5 @@
 using currency_api.data;
+using currency_api.services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -6,6 +7,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Configuração do Banco de Dados (SQLite)
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlite("Data Source=app.db"));
+
+builder.Services.AddHttpClient<CurrencyService>();
+builder.Services.AddScoped<CurrencyService>();
 
 // Adiciona suporte a Controllers 
 builder.Services.AddControllers();
@@ -36,7 +40,6 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
-// Mapeia os controllers que criaremos
 app.MapControllers(); 
 
 // Inicia a API
