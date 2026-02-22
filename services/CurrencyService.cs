@@ -1,4 +1,3 @@
-
 using System.Text.Json;
 using currency_api.data;
 using currency_api.models;
@@ -44,7 +43,8 @@ public class CurrencyService
         }
 
         // Pega o valor de compra ("bid") e converte para decimal
-        var bidText = element.GetProperty("bid").GetString();
+        var bidText = element.GetProperty("bid").GetString()
+            ?? throw new Exception("Campo 'bid' ausente no JSON.");
         var rate = decimal.Parse(bidText, System.Globalization.CultureInfo.InvariantCulture);
 
         // Cria o objeto de log e Salva no Banco
