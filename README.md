@@ -1,6 +1,6 @@
 ## Currency API
 
-API simples para conversao de moedas usando a AwesomeAPI e registro de historico em SQLite.
+API simples para conversao de moedas usando a [AwesomeAPI](https://docs.awesomeapi.com.br/api-de-moedas) e registro de historico em SQLite.
 
 ### Estrutura do log
 - `id`
